@@ -60,6 +60,10 @@ void loop() {
   delay(100);
 }
 
+/* moveSnakeHead()
+ * takes direc as an input and changes snakeHead[] to the updated coordinates and 
+ * moves the dot on snakeArray[][]
+ */
 void moveSnakeHead(int direc) {
   //up
   if (direc == 0) {
@@ -87,6 +91,9 @@ void moveSnakeHead(int direc) {
   }
 }
 
+/* drawSnake()
+ * Takes snakeArray[][] and outputs it onto the board.
+ */
 void drawSnake() {
   matrix.fillScreen(0);
   for(int x = 0; x <= 7; x++){
@@ -105,6 +112,9 @@ void drawSnake() {
   }
 }
 
+/* go__()
+ * Changes direc to the direction the interrupt affects
+ */
 void goUp() {
   direc = 0;
 }
